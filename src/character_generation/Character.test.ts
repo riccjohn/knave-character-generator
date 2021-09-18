@@ -5,11 +5,12 @@ describe("Character", () => {
 
   describe("initialization", () => {
     // TODO: mock out Gear class
+    // TODO: Mock out Dice class
     beforeEach(() => {
       character = new Character();
     });
 
-    it("sets a default for all abilities", () => {
+    test("sets a default for all abilities", () => {
       const defaultAbility = { bonus: 3, defense: 13 };
 
       expect(character.charisma).toEqual(defaultAbility);
@@ -20,29 +21,29 @@ describe("Character", () => {
       expect(character.wisdom).toEqual(defaultAbility);
     });
 
-    it("sets a default for copper pieces", () => {
+    test("sets a default for copper pieces", () => {
       expect(character.copperPieces).toEqual(0);
     });
 
-    it("sets a default list of items", () => {
+    test("sets a default list of items", () => {
       const defaultItem = { name: "", count: 0, type: "food", slots: 0 };
       expect(character.items).toHaveLength(1);
       expect(character.items[0]).toEqual(defaultItem);
     });
 
-    it("sets a default level of 0", () => {
+    test("sets a default level of 0", () => {
       expect(character.level).toBe(0);
     });
 
-    it("sets a default max HP of 0", () => {
+    test("sets a default max HP of 0", () => {
       expect(character.maxHp).toBe(0);
     });
 
-    it("sets a default gender", () => {
+    test("sets a default gender", () => {
       expect(character.gender).toEqual("non-binary");
     });
 
-    it("sets a default number of item slots", () => {
+    test("sets a default number of item slots", () => {
       expect(character.itemSlots).toEqual(0);
     });
   });
@@ -55,18 +56,18 @@ describe("Character", () => {
       generatedCharacter.generate();
     });
 
-    it("generates a level 1 character by default", () => {
+    test("generates a level 1 character by default", () => {
       expect(generatedCharacter.level).toBe(1);
     });
 
     describe("abilities", () => {
       describe("charisma", () => {
-        it("generates a random charisma", () => {
+        test("generates a random charisma", () => {
           expect(generatedCharacter.charisma.bonus).toBeLessThanOrEqual(6);
           expect(generatedCharacter.charisma.bonus).toBeGreaterThanOrEqual(1);
         });
 
-        it("has a charisma defense that is 10 higher than the bonus", () => {
+        test("has a charisma defense that is 10 higher than the bonus", () => {
           expect(generatedCharacter.charisma.defense).toEqual(
             generatedCharacter.charisma.bonus + 10
           );
@@ -74,14 +75,14 @@ describe("Character", () => {
       });
 
       describe("constitution", () => {
-        it("generates a random constitution", () => {
+        test("generates a random constitution", () => {
           expect(generatedCharacter.constitution.bonus).toBeLessThanOrEqual(6);
           expect(generatedCharacter.constitution.bonus).toBeGreaterThanOrEqual(
             1
           );
         });
 
-        it("has a constitution defense that is 10 higher than the bonus", () => {
+        test("has a constitution defense that is 10 higher than the bonus", () => {
           expect(generatedCharacter.constitution.defense).toEqual(
             generatedCharacter.constitution.bonus + 10
           );
@@ -89,12 +90,12 @@ describe("Character", () => {
       });
 
       describe("dexterity", () => {
-        it("generates a random dexterity", () => {
+        test("generates a random dexterity", () => {
           expect(generatedCharacter.dexterity.bonus).toBeLessThanOrEqual(6);
           expect(generatedCharacter.dexterity.bonus).toBeGreaterThanOrEqual(1);
         });
 
-        it("has a dexterity defense that is 10 higher than the bonus", () => {
+        test("has a dexterity defense that is 10 higher than the bonus", () => {
           expect(generatedCharacter.dexterity.defense).toEqual(
             generatedCharacter.dexterity.bonus + 10
           );
@@ -102,14 +103,14 @@ describe("Character", () => {
       });
 
       describe("intelligence", () => {
-        it("generates a random intelligence", () => {
+        test("generates a random intelligence", () => {
           expect(generatedCharacter.intelligence.bonus).toBeLessThanOrEqual(6);
           expect(generatedCharacter.intelligence.bonus).toBeGreaterThanOrEqual(
             1
           );
         });
 
-        it("has a intelligence defense that is 10 higher than the bonus", () => {
+        test("has a intelligence defense that is 10 higher than the bonus", () => {
           expect(generatedCharacter.intelligence.defense).toEqual(
             generatedCharacter.intelligence.bonus + 10
           );
@@ -117,12 +118,12 @@ describe("Character", () => {
       });
 
       describe("strength", () => {
-        it("generates a random strength", () => {
+        test("generates a random strength", () => {
           expect(generatedCharacter.strength.bonus).toBeLessThanOrEqual(6);
           expect(generatedCharacter.strength.bonus).toBeGreaterThanOrEqual(1);
         });
 
-        it("has a strength defense that is 10 higher than the bonus", () => {
+        test("has a strength defense that is 10 higher than the bonus", () => {
           expect(generatedCharacter.strength.defense).toEqual(
             generatedCharacter.strength.bonus + 10
           );
@@ -130,12 +131,12 @@ describe("Character", () => {
       });
 
       describe("wisdom", () => {
-        it("generates a random wisdom", () => {
+        test("generates a random wisdom", () => {
           expect(generatedCharacter.wisdom.bonus).toBeLessThanOrEqual(6);
           expect(generatedCharacter.wisdom.bonus).toBeGreaterThanOrEqual(1);
         });
 
-        it("has a wisdom defense that is 10 higher than the bonus", () => {
+        test("has a wisdom defense that is 10 higher than the bonus", () => {
           expect(generatedCharacter.wisdom.defense).toEqual(
             generatedCharacter.wisdom.bonus + 10
           );
@@ -143,18 +144,18 @@ describe("Character", () => {
       });
     });
 
-    it("has a number of item slots equal to the constitution defense", () => {
+    test("has a number of item slots equal to the constitution defense", () => {
       expect(generatedCharacter.itemSlots).toBe(
         generatedCharacter.constitution.defense
       );
     });
 
-    it("has a randomly generated starting copper pieces", () => {
+    test("has a randomly generated starting copper pieces", () => {
       expect(generatedCharacter.copperPieces).toBeGreaterThanOrEqual(23);
       expect(generatedCharacter.copperPieces).toBeLessThanOrEqual(38);
     });
 
-    it("randomly assigns a gender", () => {
+    test("randomly assigns a gender", () => {
       const genders = [
         "cis-male",
         "cis-female",
@@ -168,16 +169,16 @@ describe("Character", () => {
       expect(genders).toContain(generatedCharacter.gender);
     });
 
-    it("has a maxHP stat between 1 and 8", () => {
+    test("has a maxHP stat between 1 and 8", () => {
       expect(generatedCharacter.maxHp).toBeGreaterThanOrEqual(1);
       expect(generatedCharacter.maxHp).toBeLessThanOrEqual(8);
     });
 
-    it("generates a list of items", () => {
+    test("generates a list of items", () => {
       expect(generatedCharacter.items.length).toBeGreaterThan(1);
     });
 
-    it("randomly generates armor", () => {
+    test("randomly generates armor", () => {
       expect(generatedCharacter.armor).toBeTruthy();
     });
   });
