@@ -1,0 +1,119 @@
+{
+  "weapons": [
+    {
+      "name": "dagger",
+      "damage": "d6",
+      "slot": 1,
+      "quality": 3,
+      "hand": 1
+    },
+
+    {
+      "name": "cudgel",
+      "damage": "d6",
+      "slot": 1,
+      "quality": 3,
+      "hand": 1
+    },
+    {
+      "name": "sickle",
+      "damage": "d6",
+      "slot": 1,
+      "quality": 3,
+      "hand": 1
+    },
+    {
+      "name": "staff",
+      "damage": "d6",
+      "slot": 1,
+      "quality": 3,
+      "hand": 1
+    },
+    {
+      "name": "spear",
+      "damage": "d8",
+      "slot": 2,
+      "quality": 3,
+      "hand": 1
+    },
+    {
+      "name": "sword",
+      "damage": "d8",
+      "slot": 2,
+      "quality": 3,
+      "hand": 1
+    },
+    {
+      "name": "mace",
+      "damage": "d8",
+      "slot": 2,
+      "quality": 3,
+      "hand": 1
+    },
+    {
+      "name": "axe",
+      "damage": "d8",
+      "slot": 2,
+      "quality": 3,
+      "hand": 1
+    },
+    {
+      "name": "flail",
+      "damage": "d8",
+      "slot": 2,
+      "quality": 3,
+      "hand": 1
+    },
+    {
+      "name": "halberd",
+      "damage": "d10",
+      "slot": 3,
+      "quality": 3,
+      "hand": 2
+    },
+    {
+      "name": "warhammer",
+      "damage": "d10",
+      "slot": 3,
+      "quality": 3,
+      "hand": 2
+    },
+    {
+      "name": "longsword",
+
+      "damage": "d10",
+      "slot": 3,
+      "quality": 3,
+      "hand": 2
+    },
+    {
+      "name": "battleaxe",
+
+      "damage": "d10",
+      "slot": 3,
+      "quality": 3,
+      "hand": 2
+    },
+    {
+      "name": "sling",
+      "damage": "d4",
+      "slot": 1,
+      "quality": 1,
+      "hand": 1
+    },
+    {
+      "name": "bow",
+      "damage": "d6",
+      "slot": 2,
+      "quality": 3,
+      "hand": 2
+    },
+    {
+      "name": "crossbow",
+      "damage": "d8",
+      "slot": 3,
+      "quality": 3,
+      "hand": 2
+    }
+  ]
+}
