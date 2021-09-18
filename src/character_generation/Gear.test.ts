@@ -3,7 +3,6 @@ import * as gearList from "./data/gear.json";
 import Gear from "./Gear";
 
 describe("Gear", () => {
-  // TODO: mock out data json
   const itemSlots = 12;
   let gear: Gear;
 

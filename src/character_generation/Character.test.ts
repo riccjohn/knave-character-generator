@@ -1,11 +1,11 @@
 import Character from "./Character";
+jest.mock("dice/Dice");
+jest.mock("character_generation/Gear");
 
 describe("Character", () => {
   let character: Character;
 
   describe("initialization", () => {
-    // TODO: mock out Gear class
-    // TODO: Mock out Dice class
     beforeEach(() => {
       character = new Character();
     });
