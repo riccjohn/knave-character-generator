@@ -1,11 +1,16 @@
 interface IAbilities {
-  charisma: IAbility;
-  constitution: IAbility;
-  dexterity: IAbility;
-  intelligence: IAbility;
-  strength: IAbility;
-  wisdom: IAbility;
+  [key: IAbilityName]: IAbility;
 }
+
+type IAbilityName = string;
+
+// type IAbilityName =
+//   | "charisma"
+//   | "constitution"
+//   | "dexterity"
+//   | "intelligence"
+//   | "strength"
+//   | "wisdom";
 
 interface IAbility {
   bonus: number;
