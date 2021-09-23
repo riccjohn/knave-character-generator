@@ -1,5 +1,5 @@
 import React from "react";
-import { TestComponent } from "./components";
+import { Abilities } from "./components";
 import CharacterContext, { ICharacterContext } from "context/CharacterContext";
 import Character from "character_generation/Character";
 
@@ -14,7 +14,7 @@ const App: React.FC = () => {
   return (
     <CharacterContext.Provider value={charContext}>
       <div className="App">
-        <TestComponent />
+        <Abilities />
       </div>
     </CharacterContext.Provider>
   );
