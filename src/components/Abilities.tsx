@@ -63,15 +63,9 @@ const AbilityRow = (props: IAbilityRowProps) => {
 
   return (
     <tr data-testid={`${lowerCaseLabel}-row`} role="row">
-      <td data-testid={`${lowerCaseLabel}-defense`} role="cell">
-        {defense}
-      </td>
-      <th data-testid={`${lowerCaseLabel}-label`} role="cell">
-        {label}
-      </th>
-      <td data-testid={`${lowerCaseLabel}-bonus`} role="cell">
-        {bonus}
-      </td>
+      <td role="cell">{defense}</td>
+      <th role="cell">{label}</th>
+      <td role="cell">{bonus}</td>
     </tr>
   );
 };

@@ -1,19 +1,18 @@
 import { render, screen } from "@testing-library/react";
+import Character from "character_generation/Character";
 import { Abilities } from "components";
+import CharacterContext, { ICharacterContext } from "context/CharacterContext";
 
 describe("<Abilities />", () => {
-  // TODO: Pass context and use non-default scores here!!
-  const abilities: { [key: string]: IAbility } = {
-    charisma: { bonus: 3, defense: 13 },
-    constitution: { bonus: 3, defense: 13 },
-    dexterity: { bonus: 3, defense: 13 },
-    intelligence: { bonus: 3, defense: 13 },
-    strength: { bonus: 3, defense: 13 },
-    wisdom: { bonus: 3, defense: 13 },
+  const character = new Character();
+  character.generate();
+
+  const context = {
+    character,
   };
 
   beforeEach(() => {
-    render(<Abilities />);
+    renderAbilities(context);
   });
 
   test("renders a caption", () => {
@@ -30,31 +29,33 @@ describe("<Abilities />", () => {
     expect(bonus).toBeInTheDocument();
   });
 
-  describe("ability score rows", () => {
-    Object.keys(abilities).forEach((ability: string) => {
-      let label: string;
-      let abilityRow: HTMLElement;
+  describe("charisma row", () => {
+    test("renders a charisma ability row", () => {
+      const charismaRow = screen.getByTestId("cha-row");
+      expect(charismaRow).toBeInTheDocument();
+      expect(charismaRow.childElementCount).toBe(3);
+    });
 
-      beforeEach(() => {
-        label = ability.toUpperCase().slice(0, 3);
-        abilityRow = screen.getByTestId(`${label.toLowerCase()}-row`);
-      });
+    test("renders the correct values in the charisma row", () => {
+      const charismaStats = character.charisma;
+      const charismaRow = screen.getByTestId("cha-row");
+      const charismaCells = charismaRow.childNodes;
 
-      test(`renders a ${ability} stat`, () => {
-        expect(abilityRow).toBeInTheDocument();
-        expect(abilityRow.childElementCount).toBe(3);
-      });
-
-      test(`renders the correct cells for ${ability}`, () => {
-        const abilityScore = abilities[ability];
-        const { childNodes } = abilityRow;
-
-        expect(childNodes[0]).toHaveTextContent(
-          abilityScore.defense.toString()
-        );
-        expect(childNodes[1]).toHaveTextContent(label);
-        expect(childNodes[2]).toHaveTextContent(abilityScore.bonus.toString());
-      });
+      expect(charismaCells[0]).toHaveTextContent(
+        charismaStats.defense.toString()
+      );
+      expect(charismaCells[1]).toHaveTextContent("CHA");
+      expect(charismaCells[2]).toHaveTextContent(
+        charismaStats.bonus.toString()
+      );
     });
   });
 });
+
+const renderAbilities = (context: ICharacterContext) => {
+  return render(
+    <CharacterContext.Provider value={context}>
+      <Abilities />
+    </CharacterContext.Provider>
+  );
+};
