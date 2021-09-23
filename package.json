@@ -59,6 +59,13 @@
   "resolutions": {
     "styled-components": "^5"
   },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "src/stories",
+      "src/ index.ts",
+      "src/reportWebVitals.ts"
+    ]
+  },
   "devDependencies": {
     "@storybook/addon-actions": "^6.3.8",
     "@storybook/addon-essentials": "^6.3.8",
