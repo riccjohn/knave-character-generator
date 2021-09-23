@@ -29,26 +29,33 @@ describe("<Abilities />", () => {
     expect(bonus).toBeInTheDocument();
   });
 
-  describe("charisma row", () => {
-    test("renders a charisma ability row", () => {
-      const charismaRow = screen.getByTestId("cha-row");
-      expect(charismaRow).toBeInTheDocument();
-      expect(charismaRow.childElementCount).toBe(3);
-    });
+  const characterAbilities = character.abilityScores;
 
-    test("renders the correct values in the charisma row", () => {
-      const charismaStats = character.charisma;
-      const charismaRow = screen.getByTestId("cha-row");
-      const charismaCells = charismaRow.childNodes;
+  Object.keys(characterAbilities).forEach((ability: string) => {
+    const shortAbility = ability.slice(0, 3);
+    const rowName = `${shortAbility}-row`;
 
-      expect(charismaCells[0]).toHaveTextContent(
-        charismaStats.defense.toString()
-      );
-      expect(charismaCells[1]).toHaveTextContent("CHA");
-      expect(charismaCells[2]).toHaveTextContent(
-        charismaStats.bonus.toString()
-      );
-    });
+    describe(`${ability}`, () => {
+      test(`renders a ${ability} row`, () => {
+        const row = screen.getByTestId(rowName);
+        expect(row).toBeInTheDocument();
+      }); // renders a {ability}
+
+      test(`renders the correct values in the ${ability} row`, () => {
+        const abilityValues = characterAbilities[ability as IAbilityName];
+
+        const row = screen.getByTestId(rowName);
+        const abilityCells = row.childNodes;
+
+        expect(abilityCells[0]).toHaveTextContent(
+          abilityValues.defense.toString()
+        );
+        expect(abilityCells[1]).toHaveTextContent(shortAbility.toUpperCase());
+        expect(abilityCells[2]).toHaveTextContent(
+          abilityValues.bonus.toString()
+        );
+      }); // renders the correct values in the {ability} row
+    }); // describe {ability}
   });
 });
 

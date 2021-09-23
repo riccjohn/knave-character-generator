@@ -1,5 +1,14 @@
 type IAbilities = Record<IAbilityName, IAbility>;
 
+// enum IAbilityName {
+//   "charisma",
+//   "constitution",
+//   "dexterity",
+//   "intelligence",
+//   "strength",
+//   "wisdom"
+// }
+
 type IAbilityName =
   | "charisma"
   | "constitution"
