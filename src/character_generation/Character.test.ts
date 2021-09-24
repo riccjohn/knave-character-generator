@@ -142,6 +142,21 @@ describe("Character", () => {
           );
         });
       });
+
+      describe("abilityScores", () => {
+        test("has a getter method to get all ability scores", () => {
+          const abilities = generatedCharacter.abilityScores;
+          const abilityNames = Object.keys(abilities);
+          expect(abilityNames.sort()).toEqual([
+            "charisma",
+            "constitution",
+            "dexterity",
+            "intelligence",
+            "strength",
+            "wisdom",
+          ]);
+        });
+      });
     });
 
     test("has a number of item slots equal to the constitution defense", () => {

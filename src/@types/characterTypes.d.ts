@@ -1,11 +1,12 @@
-interface IAbilities {
-  charisma: IAbility;
-  constitution: IAbility;
-  dexterity: IAbility;
-  intelligence: IAbility;
-  strength: IAbility;
-  wisdom: IAbility;
-}
+type IAbilities = Record<IAbilityName, IAbility>;
+
+type IAbilityName =
+  | "charisma"
+  | "constitution"
+  | "dexterity"
+  | "intelligence"
+  | "strength"
+  | "wisdom";
 
 interface IAbility {
   bonus: number;

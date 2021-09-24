@@ -1,7 +1,7 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import App from "./App";
 
 test("renders the test component", () => {
-  const { getByText } = render(<App />);
-  expect(getByText(/HELLO I AM APP/i)).toBeInTheDocument();
+  render(<App />);
+  expect(screen.getByText(/Abilities/i)).toBeInTheDocument();
 });

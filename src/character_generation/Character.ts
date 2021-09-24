@@ -52,6 +52,10 @@ class Character {
     this.armor = gear.armor;
   };
 
+  public get abilityScores() {
+    return this.abilities;
+  }
+
   public get charisma() {
     return this.abilities.charisma;
   }
@@ -75,6 +79,8 @@ class Character {
   public get wisdom() {
     return this.abilities.wisdom;
   }
+
+  // END PUBLIC METHODS
 
   private rollForCopperPieces = () => {
     return Dice.roll(6, 3) + 20;
