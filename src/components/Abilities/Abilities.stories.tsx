@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta } from "@storybook/react";
-import { Abilities } from "./";
+import Abilities from ".";
 import CharacterContext from "context/CharacterContext";
 import Character from "character_generation/Character";
 
