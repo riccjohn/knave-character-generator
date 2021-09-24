@@ -1,4 +1,8 @@
 # Ignore artifacts:
 build
 coverage
+public
+yarn.lock
+.github
+package.json
 plop
