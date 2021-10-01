@@ -1,16 +1,17 @@
-import React from "react";
-import CharacterContext from "context/CharacterContext";
+import React from "react"
+import { StyledTable } from "./Abilities.styles"
+import CharacterContext from "context/CharacterContext"
 
 const Abilities: React.FC = () => {
-  const context = React.useContext(CharacterContext);
-  const { character } = context;
-  const abilityScores: IAbilities = character.abilityScores;
+  const context = React.useContext(CharacterContext)
+  const { character } = context
+  const abilityScores: IAbilities = character.abilityScores
 
   const { charisma, constitution, dexterity, intelligence, strength, wisdom } =
-    abilityScores;
+    abilityScores
 
   return (
-    <table>
+    <StyledTable>
       <caption>Abilities</caption>
       <thead>
         <tr role="row">
@@ -47,19 +48,19 @@ const Abilities: React.FC = () => {
           defense={charisma.defense}
         />
       </tbody>
-    </table>
-  );
-};
+    </StyledTable>
+  )
+}
 
 interface IAbilityRowProps {
-  defense: number;
-  label: string;
-  bonus: number;
+  defense: number
+  label: string
+  bonus: number
 }
 
 const AbilityRow = (props: IAbilityRowProps) => {
-  const { bonus, defense, label } = props;
-  const lowerCaseLabel = label.toLowerCase();
+  const { bonus, defense, label } = props
+  const lowerCaseLabel = label.toLowerCase()
 
   return (
     <tr data-testid={`${lowerCaseLabel}-row`} role="row">
@@ -67,7 +68,7 @@ const AbilityRow = (props: IAbilityRowProps) => {
       <th role="cell">{label}</th>
       <td role="cell">{bonus}</td>
     </tr>
-  );
-};
+  )
+}
 
-export default Abilities;
+export default Abilities
