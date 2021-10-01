@@ -5,7 +5,8 @@ export const StyledTable = styled.table`
   width: 100%;
 
   caption {
-    font-weight: bold;
+    font-family: SebaldusGotisch;
+    font-size: 2em;
   }
 
   thead tr {
