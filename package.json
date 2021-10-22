@@ -69,18 +69,19 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.3.8",
-    "@storybook/addon-essentials": "^6.3.8",
-    "@storybook/addon-links": "^6.3.8",
-    "@storybook/node-logger": "^6.3.8",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/node-logger": "^6.3.12",
     "@storybook/preset-create-react-app": "^3.2.0",
-    "@storybook/react": "^6.3.8",
+    "@storybook/react": "^6.3.12",
     "@types/styled-components": "^5.1.14",
     "babel-loader": "8.1.0",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.0",
     "plop": "^2.7.4",
     "prettier": "2.4.1",
-    "pretty-quick": "^3.1.1"
+    "pretty-quick": "^3.1.1",
+    "storybook": "^6.3.12"
   }
 }
