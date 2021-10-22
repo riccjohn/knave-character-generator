@@ -10,15 +10,12 @@ on:
   push:
     branches: [ main ]
   pull_request:
-    # The branches below must be a subset of the branches above
     branches: [ main ]
     paths-ignore:
       - src/node_modules
       - src/stories
       - '**/*.stories.tsx'
       - '**/*.test.tsx'
-  schedule:
-    - cron: '17 5 * * 4'
 
 jobs:
   analyze:
