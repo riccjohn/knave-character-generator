@@ -1,7 +1,8 @@
 import React from "react"
 import { Meta, Story } from "@storybook/react"
-import GlobalFonts from "fonts/fonts"
 import { Subtitle } from "StyledComponents"
+import { Shell } from "components"
+import Character from "character_generation/Character"
 
 export default {
   component: Subtitle,
@@ -12,12 +13,13 @@ interface IStoryProps {
   text: string
 }
 
+const character = new Character()
+
 const Template: Story<IStoryProps> = ({ text }) => {
   return (
-    <>
-      <GlobalFonts />
+    <Shell character={character}>
       <Subtitle>{text}</Subtitle>
-    </>
+    </Shell>
   )
 }
 

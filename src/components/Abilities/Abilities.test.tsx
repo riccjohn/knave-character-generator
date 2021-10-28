@@ -1,18 +1,13 @@
 import { render, screen } from "@testing-library/react"
 import Character from "character_generation/Character"
-import { Abilities } from "components"
-import CharacterContext, { ICharacterContext } from "context/CharacterContext"
+import { Abilities, Shell } from "components"
 
 describe("<Abilities />", () => {
   const character = new Character()
   character.generate()
 
-  const context = {
-    character,
-  }
-
   beforeEach(() => {
-    renderAbilities(context)
+    renderAbilities(character)
   })
 
   test("renders a caption", () => {
@@ -59,10 +54,10 @@ describe("<Abilities />", () => {
   })
 })
 
-const renderAbilities = (context: ICharacterContext) => {
+const renderAbilities = (character: Character) => {
   return render(
-    <CharacterContext.Provider value={context}>
+    <Shell character={character}>
       <Abilities />
-    </CharacterContext.Provider>
+    </Shell>
   )
 }
