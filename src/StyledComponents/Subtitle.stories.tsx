@@ -1,6 +1,6 @@
 import React from "react"
 import { Meta, Story } from "@storybook/react"
-import { Subtitle } from "StyledComponents"
+import { Subtitle } from "."
 import { Shell } from "components"
 import Character from "character_generation/Character"
 

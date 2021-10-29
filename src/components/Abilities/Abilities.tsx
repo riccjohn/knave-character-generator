@@ -1,6 +1,6 @@
 import React from "react"
 import { StyledTable } from "./Abilities.styles"
-import { Subtitle } from "StyledComponents"
+import { Subtitle } from "styledComponents"
 import CharacterContext from "context/CharacterContext"
 
 const Abilities: React.FC = () => {
