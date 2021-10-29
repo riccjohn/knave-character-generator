@@ -1,9 +1,9 @@
-import { StyledTable } from "styledComponents/Table"
-import { Subtitle } from "styledComponents"
+import React, { useContext } from "react"
+import { Subtitle, Table } from "styledComponents"
 import CharacterContext from "context/CharacterContext"
 
 const Abilities: React.FC = () => {
-  const context = React.useContext(CharacterContext)
+  const context = useContext(CharacterContext)
   const { character } = context
   const abilityScores: IAbilities = character.abilityScores
 
@@ -13,7 +13,7 @@ const Abilities: React.FC = () => {
   return (
     <>
       <Subtitle>Ability Scores</Subtitle>
-      <StyledTable>
+      <Table>
         <thead>
           <tr role="row">
             <th role="cell">Defense</th>
@@ -53,7 +53,7 @@ const Abilities: React.FC = () => {
             defense={charisma.defense}
           />
         </tbody>
-      </StyledTable>
+      </Table>
     </>
   )
 }

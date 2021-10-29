@@ -7,4 +7,6 @@ const Subtitle = styled.h2`
   color: black;
 `
 
+Subtitle.displayName = "Subtitle"
+
 export default Subtitle

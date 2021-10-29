@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const StyledTable = styled.table`
+const StyledTable = styled.table`
   border-collapse: collapse;
   width: 50%;
   table-layout: fixed;
@@ -30,3 +30,5 @@ export const StyledTable = styled.table`
 `
 
 StyledTable.displayName = "StyledTable"
+
+export default StyledTable

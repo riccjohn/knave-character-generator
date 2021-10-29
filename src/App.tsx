@@ -3,6 +3,7 @@ import { Abilities, Shell } from "./components"
 import Character from "character_generation/Character"
 import { Subtitle } from "styledComponents"
 import styled from "styled-components"
+import Items from "components/Items"
 
 const App: React.FC = () => {
   const character = new Character()
@@ -13,7 +14,7 @@ const App: React.FC = () => {
       <Layout>
         <h1>Knave</h1>
         <Subtitle>Traits</Subtitle>
-        <Subtitle>Items</Subtitle>
+        <Items />
         <Abilities />
       </Layout>
     </Shell>
