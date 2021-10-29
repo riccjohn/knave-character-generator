@@ -12,9 +12,13 @@ export default {
 const character = new Character()
 character.generate()
 
-export const Primary: React.VFC<{}> = () => {
+interface IProps {
+  characterOverride?: Character
+}
+
+export const Primary: React.VFC<IProps> = ({ characterOverride }) => {
   return (
-    <Shell character={character}>
+    <Shell character={characterOverride ? characterOverride : character}>
       <Abilities />
     </Shell>
   )
