@@ -1,9 +1,14 @@
 import React from "react"
+import { Meta } from "@storybook/react"
 import {{properCase name}} from "."
 
 export default {
   component: {{properCase name}},
   title: "Components/{{properCase name}}",
-}
+} as Meta
 
-export const defaultStory = () => <{{properCase name}} />
+export const Primary: React.VFC<{}> = () => {
+  return (
+    <{{properCase name}} />
+  )
+}
