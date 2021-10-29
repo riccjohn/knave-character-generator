@@ -1,5 +1,4 @@
-import React from "react"
-import { StyledTable } from "./Abilities.styles"
+import { StyledTable } from "styledComponents/Table"
 import { Subtitle } from "styledComponents"
 import CharacterContext from "context/CharacterContext"
 
