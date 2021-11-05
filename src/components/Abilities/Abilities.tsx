@@ -1,5 +1,5 @@
 import React, { useContext } from "react"
-import { Subtitle, Table } from "styledComponents"
+import { Subtitle, Table } from "styled_components"
 import CharacterContext from "context/CharacterContext"
 
 const Abilities: React.FC = () => {
