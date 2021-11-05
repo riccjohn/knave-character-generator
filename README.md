@@ -8,17 +8,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Storybook allows you to easily see, manage, and create components. Start it up by running:
 
-```zsh
-yarn storybook
-```
+### `yarn storybook`
 
 ### Create a New Storybook Component
 
 Use `plop` to create all necessary files for a new Storybook component.
 
-```zsh
-yarn plop
-```
+### `yarn plop`
 
 You'll be prompted for the name of the component to create.
 
