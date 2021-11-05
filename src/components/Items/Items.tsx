@@ -1,6 +1,6 @@
 import CharacterContext from "context/CharacterContext"
 import React, { useContext } from "react"
-import { Subtitle, Table } from "styledComponents"
+import { Subtitle, Table } from "styled_components"
 
 const Items: React.FC = () => {
   const context = useContext(CharacterContext)
