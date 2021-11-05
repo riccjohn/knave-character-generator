@@ -1,12 +1,12 @@
 import React from "react"
 import { Meta } from "@storybook/react"
-import Abilities from "."
-import Character from "character_generation/Character"
 import { Shell } from "components"
+import Items from "."
+import Character from "character_generation/Character"
 
 export default {
-  component: Abilities,
-  title: "Components/Abilities",
+  component: Items,
+  title: "Components/Items",
 } as Meta
 
 const character = new Character()
@@ -19,7 +19,7 @@ interface IProps {
 export const Primary: React.VFC<IProps> = ({ characterOverride }) => {
   return (
     <Shell character={characterOverride ? characterOverride : character}>
-      <Abilities />
+      <Items />
     </Shell>
   )
 }

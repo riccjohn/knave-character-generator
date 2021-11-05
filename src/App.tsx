@@ -1,7 +1,9 @@
 import React from "react"
 import { Abilities, Shell } from "./components"
 import Character from "character_generation/Character"
-import { Subtitle } from "StyledComponents"
+import { Subtitle } from "styled_components"
+import styled from "styled-components"
+import Items from "components/Items"
 
 const App: React.FC = () => {
   const character = new Character()
@@ -9,14 +11,24 @@ const App: React.FC = () => {
 
   return (
     <Shell character={character}>
-      <div className="App">
+      <Layout>
         <h1>Knave</h1>
         <Subtitle>Traits</Subtitle>
-        <Subtitle>Items</Subtitle>
+        <Items />
         <Abilities />
-      </div>
+      </Layout>
     </Shell>
   )
 }
+
+const Layout = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+`
+
+Layout.displayName = "Layout"
 
 export default App

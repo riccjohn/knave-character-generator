@@ -1,9 +1,9 @@
 import { render } from "@testing-library/react"
-import { defaultStory } from "./{{properCase name}}.stories"
+import { Primary as {{properCase name}} } from "./{{properCase name}}.stories"
 
 describe("{{properCase name}}", () => {
-  it("displays the component", () => {
-    const { getByText } = render(defaultStory())
+  test("displays the component", () => {
+    const { getByText } = render(<{{properCase name}} />)
     expect(getByText("Hello World")).toBeTruthy()
   })
 })

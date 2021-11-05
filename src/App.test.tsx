@@ -63,17 +63,23 @@ describe("<App />", () => {
 
   // displays a table of items
   describe("displays a table of gear", () => {
-    xtest("with an 'Item' column", () => {
+    test("with an 'Item' column", () => {
       render(<App />)
       expect(screen.getByText(/^Item$/)).toBeVisible()
     })
 
-    xtest("with a 'Defense / Damage' column", () => {
+    // TODO: fix this query. It's finding the 'defense' column from Abilities too
+    xtest("with a 'Defense' column", () => {
       render(<App />)
-      expect(screen.getByText(/Defense \/ Damage/)).toBeVisible()
+      expect(screen.getByText(/Defense/)).toBeVisible()
     })
 
-    xtest("with a 'Slots' column", () => {
+    test("with a 'Damage' column", () => {
+      render(<App />)
+      expect(screen.getByText(/Damage/)).toBeVisible()
+    })
+
+    test("with a 'Slots' column", () => {
       render(<App />)
       expect(screen.getByText(/Slots/)).toBeVisible()
     })

@@ -1,13 +1,9 @@
 import styled from "styled-components"
 
-export const StyledTable = styled.table`
+const StyledTable = styled.table`
   border-collapse: collapse;
-  width: 100%;
-
-  caption {
-    font-family: SebaldusGotisch;
-    font-size: 2em;
-  }
+  width: 50%;
+  table-layout: fixed;
 
   thead tr {
     background: black;
@@ -27,6 +23,12 @@ export const StyledTable = styled.table`
     padding: 0.5em 0;
     text-align: center;
   }
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 `
 
 StyledTable.displayName = "StyledTable"
+
+export default StyledTable
