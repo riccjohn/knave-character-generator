@@ -47,11 +47,9 @@ describe("<App />", () => {
     expect(screen.getByText(/Items/)).toBeVisible()
   })
 
-  xtest("displays the number of item slots used", () => {
+  test("displays the number of item slots used", () => {
     render(<App />)
-    expect(
-      screen.getByText(/Item Slots Used:\s\d{1,2}\s\/\s\d{1,2}/g)
-    ).toBeVisible()
+    expect(screen.getByText(/Item Slots Used:\s\d+\/\d+/g)).toBeVisible()
   })
 
   xtest("displays a 'Weapon' subtitle", () => {
@@ -81,7 +79,7 @@ describe("<App />", () => {
 
     test("with a 'Slots' column", () => {
       render(<App />)
-      expect(screen.getByText(/Slots/)).toBeVisible()
+      expect(screen.getByRole("cell", { name: "Slots" })).toBeVisible()
     })
   })
 

@@ -6,10 +6,18 @@ const Items: React.FC = () => {
   const context = useContext(CharacterContext)
   const { character } = context
   const { items } = character
+  const maxItemSlots = character.itemSlots
+  const itemSlotsUsed = character.items.reduce(
+    (acc, curr) => acc + curr.slots,
+    0
+  )
 
   return (
     <>
       <Subtitle>Items</Subtitle>
+      <p data-testid="item-slots-used">
+        {`Item Slots Used: ${itemSlotsUsed}/${maxItemSlots}`}
+      </p>
       <Table>
         <thead>
           <tr role="row">
