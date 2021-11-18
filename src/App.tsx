@@ -1,7 +1,7 @@
 import React from "react"
 import { Abilities, Shell } from "./components"
 import Character from "character_generation/Character"
-import { Subtitle } from "styled_components"
+import { Subtitle, Title } from "styled_components"
 import styled from "styled-components"
 import Items from "components/Items"
 
@@ -12,7 +12,7 @@ const App: React.FC = () => {
   return (
     <Shell character={character}>
       <Layout>
-        <h1>Knave</h1>
+        <Title>Knave</Title>
         <Subtitle>Traits</Subtitle>
         <Items />
         <Abilities />
