@@ -67,9 +67,9 @@ describe("<App />", () => {
     })
 
     // TODO: fix this query. It's finding the 'defense' column from Abilities too
-    xtest("with a 'Defense' column", () => {
+    test("with a 'Defense' column", () => {
       render(<App />)
-      expect(screen.getByText(/Defense/)).toBeVisible()
+      expect(screen.getByTestId(/item-defense-heading/)).toBeVisible()
     })
 
     test("with a 'Damage' column", () => {
