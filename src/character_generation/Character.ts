@@ -2,13 +2,7 @@ import Dice from "dice/Dice";
 import Gear from "./Gear";
 
 class Character {
-  public armor: IArmor;
-  public copperPieces: number;
-  public gender: IGender;
-  public items: IGear[];
-  public itemSlots: number;
-  public level: number;
-  public maxHp: number;
+  public weapon: IWeapon
 
   private abilities: IAbilities;
 
@@ -29,13 +23,15 @@ class Character {
       quality: 0,
       slots: 0,
       type: "armor",
-    };
-    this.copperPieces = 0;
-    this.gender = "non-binary";
-    this.items = [{ name: "", count: 0, type: "food", slots: 0 }];
-    this.itemSlots = 0;
-    this.level = 0;
-    this.maxHp = 0;
+    this.weapon = {
+      count: 1,
+      damage: "d6",
+      hand: 1,
+      name: "",
+      quality: 0,
+      slots: 1,
+      type: "weapon",
+    }
   }
 
   public generate = (): void => {
@@ -48,9 +44,8 @@ class Character {
 
     const gear = new Gear(this.itemSlots);
 
-    this.items = gear.items;
-    this.armor = gear.armor;
-  };
+    this.weapon = gear.weapon
+  }
 
   public get abilityScores() {
     return this.abilities;
