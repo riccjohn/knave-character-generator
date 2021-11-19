@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/knave-character-generator/static/css/main.4a4137e4.chunk.css",
-    "main.js": "/knave-character-generator/static/js/main.b4744598.chunk.js",
-    "main.js.map": "/knave-character-generator/static/js/main.b4744598.chunk.js.map",
-    "runtime-main.js": "/knave-character-generator/static/js/runtime-main.121d72d6.js",
-    "runtime-main.js.map": "/knave-character-generator/static/js/runtime-main.121d72d6.js.map",
-    "static/js/2.b713e11f.chunk.js": "/knave-character-generator/static/js/2.b713e11f.chunk.js",
-    "static/js/2.b713e11f.chunk.js.map": "/knave-character-generator/static/js/2.b713e11f.chunk.js.map",
-    "static/js/3.705e104d.chunk.js": "/knave-character-generator/static/js/3.705e104d.chunk.js",
-    "static/js/3.705e104d.chunk.js.map": "/knave-character-generator/static/js/3.705e104d.chunk.js.map",
+    "main.js": "/knave-character-generator/static/js/main.0fa3c79d.chunk.js",
+    "main.js.map": "/knave-character-generator/static/js/main.0fa3c79d.chunk.js.map",
+    "runtime-main.js": "/knave-character-generator/static/js/runtime-main.3d2c6d0d.js",
+    "runtime-main.js.map": "/knave-character-generator/static/js/runtime-main.3d2c6d0d.js.map",
+    "static/js/2.935957a9.chunk.js": "/knave-character-generator/static/js/2.935957a9.chunk.js",
+    "static/js/2.935957a9.chunk.js.map": "/knave-character-generator/static/js/2.935957a9.chunk.js.map",
+    "static/js/3.a5954c96.chunk.js": "/knave-character-generator/static/js/3.a5954c96.chunk.js",
+    "static/js/3.a5954c96.chunk.js.map": "/knave-character-generator/static/js/3.a5954c96.chunk.js.map",
     "index.html": "/knave-character-generator/index.html",
     "static/css/main.4a4137e4.chunk.css.map": "/knave-character-generator/static/css/main.4a4137e4.chunk.css.map",
-    "static/js/2.b713e11f.chunk.js.LICENSE.txt": "/knave-character-generator/static/js/2.b713e11f.chunk.js.LICENSE.txt",
+    "static/js/2.935957a9.chunk.js.LICENSE.txt": "/knave-character-generator/static/js/2.935957a9.chunk.js.LICENSE.txt",
     "static/media/Sebaldus-Gotisch.4bb1e1aa.woff2": "/knave-character-generator/static/media/Sebaldus-Gotisch.4bb1e1aa.woff2",
     "static/media/Sebaldus-Gotisch.b7fba9af.woff": "/knave-character-generator/static/media/Sebaldus-Gotisch.b7fba9af.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.121d72d6.js",
-    "static/js/2.b713e11f.chunk.js",
+    "static/js/runtime-main.3d2c6d0d.js",
+    "static/js/2.935957a9.chunk.js",
     "static/css/main.4a4137e4.chunk.css",
-    "static/js/main.b4744598.chunk.js"
+    "static/js/main.0fa3c79d.chunk.js"
   ]
 }
