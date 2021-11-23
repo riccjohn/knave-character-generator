@@ -2,6 +2,10 @@ import { render, screen } from "@testing-library/react"
 import Character from "character_generation/Character"
 import { Primary as Items } from "./Items.stories"
 
+jest.mock("character_generation/Description")
+jest.mock("character_generation/Gear")
+jest.mock("character_generation/Randomization")
+
 describe("Items", () => {
   const character: Character = new Character()
   character.generate()
