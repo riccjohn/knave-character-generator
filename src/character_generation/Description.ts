@@ -9,9 +9,7 @@ class Description {
   }
 
   private generateRandomTraits() {
-    const nouns: string[] = Object.keys(traitsData).filter(
-      el => el !== "default"
-    )
+    const nouns: string[] = Object.keys(traitsData)
 
     const randomTraits: Record<INoun, string> = nouns.reduce(
       (acc: Record<string, string>, curr: string) => {

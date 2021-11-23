@@ -5,7 +5,7 @@ jest.mock("character_generation/Randomization")
 
 describe("Description", () => {
   describe("traits", () => {
-    const nouns = Object.keys(traitsData).filter(noun => noun !== "default")
+    const nouns = Object.keys(traitsData)
 
     const description = new Description()
     const traits: ITraits = description.traits
