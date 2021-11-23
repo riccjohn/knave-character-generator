@@ -1,6 +1,6 @@
-import * as armorList from "./data/armor.json"
-import * as gearList from "./data/gear.json"
-import * as weaponList from "./data/weapons.json"
+import armorList from "./data/armor.json"
+import gearList from "./data/gear.json"
+import weaponList from "./data/weapons.json"
 import Gear from "./Gear"
 
 jest.mock("character_generation/Randomization")

@@ -1,6 +1,6 @@
-import * as armorList from "character_generation/data/armor.json"
-import * as gearList from "character_generation/data/gear.json"
-import * as weaponList from "character_generation/data/weapons.json"
+import armorList from "character_generation/data/armor.json"
+import gearList from "character_generation/data/gear.json"
+import weaponList from "character_generation/data/weapons.json"
 import { Randomization } from "character_generation"
 
 class Gear {

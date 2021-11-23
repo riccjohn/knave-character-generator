@@ -1,4 +1,4 @@
-import * as traitsData from "character_generation/data/traits.json"
+import traitsData from "character_generation/data/traits.json"
 import { Randomization } from "character_generation"
 
 class Description {

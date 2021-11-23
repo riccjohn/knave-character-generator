@@ -1,5 +1,5 @@
 import Description from "./Description"
-import * as traitsData from "character_generation/data/traits.json"
+import traitsData from "character_generation/data/traits.json"
 
 jest.mock("character_generation/Randomization")
 
