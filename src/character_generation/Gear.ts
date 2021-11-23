@@ -1,6 +1,7 @@
 import * as armorList from "character_generation/data/armor.json"
 import * as gearList from "character_generation/data/gear.json"
 import * as weaponList from "character_generation/data/weapons.json"
+import { Randomization } from "character_generation"
 
 class Gear {
   public itemSlots: number
@@ -25,7 +26,7 @@ class Gear {
       // Ensures there is at least 1 slot remaining for a weapon to be added
       return armor.slots < slotsRemaining
     })
-    const armor = this.getRandomItem(availableArmor)
+    const armor = Randomization.getRandomItem(availableArmor)
     this.itemSlotsUsed += armor.slots
     return armor
   }
@@ -37,7 +38,7 @@ class Gear {
         return weapon.slots <= slotsRemaining
       }
     )
-    const weapon = this.getRandomItem(availableWeapons)
+    const weapon = Randomization.getRandomItem(availableWeapons)
     this.itemSlotsUsed += weapon.slots
     return weapon
   }
@@ -54,10 +55,10 @@ class Gear {
 
     const dungeoneeringGear: IGear[] = new Array(2)
       .fill(undefined)
-      .map(el => this.getRandomItem(dg))
+      .map(el => Randomization.getRandomItem(dg))
 
-    const generalGear1 = this.getRandomItem(gen1)
-    const generalGear2 = this.getRandomItem(gen2)
+    const generalGear1 = Randomization.getRandomItem(gen1)
+    const generalGear2 = Randomization.getRandomItem(gen2)
 
     // TODO: refactor so this isn't dependent on getRandomArmor being called first in the constructor
     return [
@@ -68,12 +69,6 @@ class Gear {
       this.armor,
       this.weapon,
     ]
-  }
-
-  private getRandomItem = <T>(list: T[]): T => {
-    const length = list.length
-    const randomIndex = Math.floor(Math.random() * length)
-    return list[randomIndex]
   }
 }
 

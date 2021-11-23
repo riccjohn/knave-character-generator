@@ -1,5 +1,5 @@
 import Dice from "dice/Dice"
-import Gear from "./Gear"
+import { Gear, Randomization } from "character_generation"
 
 class Character {
   public armor: IArmor
@@ -134,8 +134,7 @@ class Character {
       "gender-neutral",
     ]
 
-    // TODO: Use `getRandomItem` (currently in gear class. move to utils?)
-    return genders[Math.floor(Math.random() * genders.length)]
+    return Randomization.getRandomItem(genders)
   }
 }
 
