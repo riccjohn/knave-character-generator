@@ -1,5 +1,5 @@
 import Dice from "dice/Dice"
-import Gear from "./Gear"
+import { Description, Gear, Randomization } from "character_generation"
 
 class Character {
   public armor: IArmor
@@ -9,6 +9,7 @@ class Character {
   public itemSlots: number
   public level: number
   public maxHp: number
+  public traits: ITraits
   public weapon: IWeapon
 
   private abilities: IAbilities
@@ -37,6 +38,7 @@ class Character {
     this.itemSlots = 0
     this.level = 0
     this.maxHp = 0
+    this.traits = this.generateTraits()
     this.weapon = {
       count: 1,
       damage: "d6",
@@ -134,8 +136,11 @@ class Character {
       "gender-neutral",
     ]
 
-    // TODO: Use `getRandomItem` (currently in gear class. move to utils?)
-    return genders[Math.floor(Math.random() * genders.length)]
+    return Randomization.getRandomItem(genders)
+  }
+
+  private generateTraits = (): ITraits => {
+    return new Description().traits
   }
 }
 

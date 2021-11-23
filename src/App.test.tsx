@@ -12,7 +12,20 @@ describe("<App />", () => {
     expect(screen.getByText(/Traits/)).toBeVisible()
   })
 
-  // displays a character description
+  test("displays a list of traits", () => {
+    render(<App />)
+
+    expect(screen.getByText(/Physique:/)).toBeVisible()
+    expect(screen.getByText(/Face:/)).toBeVisible()
+    expect(screen.getByText(/Skin:/)).toBeVisible()
+    expect(screen.getByText(/Hair:/)).toBeVisible()
+    expect(screen.getByText(/Clothing:/)).toBeVisible()
+    expect(screen.getByText(/Virtue:/)).toBeVisible()
+    expect(screen.getByText(/Vice:/)).toBeVisible()
+    expect(screen.getByText(/Speech:/)).toBeVisible()
+    expect(screen.getByText(/Background:/)).toBeVisible()
+    expect(screen.getByText(/Misfortune:/)).toBeVisible()
+  })
 
   xtest("displays an the character's level and hit points", () => {
     render(<App />)

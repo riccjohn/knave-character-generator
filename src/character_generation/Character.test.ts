@@ -1,6 +1,9 @@
 import Character from "./Character"
+
 jest.mock("dice/Dice")
+jest.mock("character_generation/Description")
 jest.mock("character_generation/Gear")
+jest.mock("character_generation/Randomization")
 
 describe("Character", () => {
   let character: Character
@@ -45,6 +48,10 @@ describe("Character", () => {
 
     test("sets a default number of item slots", () => {
       expect(character.itemSlots).toEqual(0)
+    })
+
+    test("generates a list of traits", () => {
+      expect(character.traits).toBeTruthy()
     })
   })
 
