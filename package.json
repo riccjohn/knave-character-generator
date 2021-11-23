@@ -65,7 +65,9 @@
     "coveragePathIgnorePatterns": [
       "src/stories",
       "src/index.ts",
-      "src/reportWebVitals.ts"
+      "src/reportWebVitals.ts",
+      ".stories.tsx",
+      ".styles.ts"
     ]
   },
   "devDependencies": {
