@@ -10,4 +10,4 @@ type INoun =
   | "vice"
   | "speech"
   | "background"
-  | "misfortuines"
+  | "misfortune"

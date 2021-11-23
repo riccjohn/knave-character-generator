@@ -1,4 +1,5 @@
 import * as traitsData from "character_generation/data/traits.json"
+import { Randomization } from "character_generation"
 
 class Description {
   public traits
@@ -8,29 +9,19 @@ class Description {
   }
 
   private generateRandomTraits() {
-    // TODO: Why is 'default' in here?!
     const nouns: string[] = Object.keys(traitsData).filter(
       el => el !== "default"
     )
-    console.log("NOUNS ==>", nouns)
 
     const randomTraits: Record<INoun, string> = nouns.reduce(
       (acc: Record<string, string>, curr: string) => {
-        // TODO: Have this actually add an adjective
-        acc[curr] = "foo"
+        acc[curr] = Randomization.getRandomItem(traitsData[curr as INoun])
         return acc
       },
       {}
     )
 
     return randomTraits
-  }
-
-  // TODO: extract to new class
-  private getRandomItem = <T>(list: T[]): T => {
-    const length = list.length
-    const randomIndex = Math.floor(Math.random() * length)
-    return list[randomIndex]
   }
 }
 

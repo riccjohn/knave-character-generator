@@ -1,13 +1,20 @@
 import Description from "./Description"
+import * as traitsData from "character_generation/data/traits.json"
+
+jest.mock("character_generation/Randomization")
 
 describe("Description", () => {
   describe("traits", () => {
-    test("generates a physique trait", () => {
-      const description = new Description()
-      const traits: ITraits = description.traits
+    const nouns = Object.keys(traitsData).filter(noun => noun !== "default")
 
-      console.log("TRAITS", traits)
-      expect(traits.physique).toBeTruthy()
+    const description = new Description()
+    const traits: ITraits = description.traits
+
+    nouns.forEach(noun => {
+      test(`generates a ${noun} trait`, () => {
+        const possibleTraits = traitsData[noun as INoun]
+        expect(possibleTraits.includes(traits[noun as INoun])).toBeTruthy()
+      })
     })
   })
 })

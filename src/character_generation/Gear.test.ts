@@ -3,6 +3,8 @@ import * as gearList from "./data/gear.json"
 import * as weaponList from "./data/weapons.json"
 import Gear from "./Gear"
 
+jest.mock("character_generation/Randomization")
+
 describe("Gear", () => {
   const itemSlots = 12
   let gear: Gear
