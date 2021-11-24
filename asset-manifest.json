@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/knave-character-generator/static/css/main.4a4137e4.chunk.css",
-    "main.js": "/knave-character-generator/static/js/main.28c6317e.chunk.js",
-    "main.js.map": "/knave-character-generator/static/js/main.28c6317e.chunk.js.map",
+    "main.js": "/knave-character-generator/static/js/main.aed77e0c.chunk.js",
+    "main.js.map": "/knave-character-generator/static/js/main.aed77e0c.chunk.js.map",
     "runtime-main.js": "/knave-character-generator/static/js/runtime-main.49997d26.js",
     "runtime-main.js.map": "/knave-character-generator/static/js/runtime-main.49997d26.js.map",
     "static/js/2.4944af08.chunk.js": "/knave-character-generator/static/js/2.4944af08.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.49997d26.js",
     "static/js/2.4944af08.chunk.js",
     "static/css/main.4a4137e4.chunk.css",
-    "static/js/main.28c6317e.chunk.js"
+    "static/js/main.aed77e0c.chunk.js"
   ]
 }
