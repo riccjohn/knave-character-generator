@@ -1,5 +1,5 @@
 import React from "react"
-import { Abilities, Description, Shell } from "./components"
+import { Abilities, Description, Footer, Shell } from "./components"
 import Character from "character_generation/Character"
 import { Title } from "styled_components"
 import styled from "styled-components"
@@ -12,10 +12,11 @@ const App: React.FC = () => {
   return (
     <Shell character={character}>
       <Layout>
-        <Title>Knave</Title>
+        <Title data-testid="page-title">Knave</Title>
         <Description />
         <Items />
         <Abilities />
+        <Footer />
       </Layout>
     </Shell>
   )
@@ -25,6 +26,7 @@ const Layout = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   height: 100vh;
 `
