@@ -4,7 +4,7 @@ import App from "./App"
 describe("<App />", () => {
   test("displays a page title", () => {
     render(<App />)
-    expect(screen.getByText(/Knave/)).toBeVisible()
+    expect(screen.getByTestId("page-title")).toBeVisible()
   })
 
   test("displays a 'Traits' title", () => {
@@ -72,7 +72,6 @@ describe("<App />", () => {
 
   // displays a select menu to choose a weapon
 
-  // displays a table of items
   describe("displays a table of gear", () => {
     test("with an 'Item' column", () => {
       render(<App />)
@@ -97,4 +96,9 @@ describe("<App />", () => {
   })
 
   // displays a footer
+  test("displays a footer", () => {
+    render(<App />)
+    expect(screen.getByText(/Ben Milton/)).toBeVisible()
+    expect(screen.getByText(/John Riccardi/)).toBeVisible()
+  })
 })
