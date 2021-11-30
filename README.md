@@ -1,5 +1,7 @@
 # Knave Character Generator
 
+[![CI](https://github.com/riccjohn/knave-character-generator/actions/workflows/ci.yaml/badge.svg)](https://github.com/riccjohn/knave-character-generator/actions/workflows/ci.yaml)
+
 Live app available [here](https://riccjohn.github.io/knave-character-generator/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
