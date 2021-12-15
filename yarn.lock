@@ -5145,22 +5145,6 @@ cli-table3@0.6.0:
   optionalDependencies:
     colors "^1.1.2"
 
-cli-testing-library@^1.0.0-alpha.10:
-  version "1.0.0-alpha.15"
-  resolved "https://registry.yarnpkg.com/cli-testing-library/-/cli-testing-library-1.0.0-alpha.15.tgz#52cf58a9db4feb213a20567c43b816263895818b"
-  integrity sha512-WJkLfppmhn0dl891kk+ia7IeteuvDtIIstxECitH1vQUShApxXOFhZhnehPWmSLhVGeLo95+zRX455+jOkDloQ==
-  dependencies:
-    "@babel/code-frame" "^7.10.4"
-    "@babel/runtime" "^7.12.5"
-    chalk "^4.1.0"
-    jest-matcher-utils "^27.4.2"
-    lz-string "^1.4.4"
-    pretty-format "^27.0.2"
-    redent "^3.0.0"
-    strip-ansi "^6.0.1"
-    strip-final-newline "^2.0.0"
-    tree-kill "^1.2.2"
-
 cli-width@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-3.0.0.tgz#a2f48437a2caa9a22436e794bf071ec9e61cedf6"
@@ -9305,7 +9289,7 @@ jest-diff@^26.6.2:
     jest-get-type "^26.3.0"
     pretty-format "^26.6.2"
 
-jest-diff@^27.0.0, jest-diff@^27.4.2:
+jest-diff@^27.0.0:
   version "27.4.2"
   resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-27.4.2.tgz#786b2a5211d854f848e2dcc1e324448e9481f36f"
   integrity sha512-ujc9ToyUZDh9KcqvQDkk/gkbf6zSaeEg9AiBxtttXW59H/AcqEYp1ciXAtJp+jXWva5nAf/ePtSsgWwE5mqp4Q==
@@ -9430,16 +9414,6 @@ jest-matcher-utils@^26.6.0, jest-matcher-utils@^26.6.2:
     jest-diff "^26.6.2"
     jest-get-type "^26.3.0"
     pretty-format "^26.6.2"
-
-jest-matcher-utils@^27.4.2:
-  version "27.4.2"
-  resolved "https://registry.yarnpkg.com/jest-matcher-utils/-/jest-matcher-utils-27.4.2.tgz#d17c5038607978a255e0a9a5c32c24e984b6c60b"
-  integrity sha512-jyP28er3RRtMv+fmYC/PKG8wvAmfGcSNproVTW2Y0P/OY7/hWUOmsPfxN1jOhM+0u2xU984u2yEagGivz9OBGQ==
-  dependencies:
-    chalk "^4.0.0"
-    jest-diff "^27.4.2"
-    jest-get-type "^27.4.0"
-    pretty-format "^27.4.2"
 
 jest-message-util@^26.6.0, jest-message-util@^26.6.2:
   version "26.6.2"
@@ -11582,14 +11556,13 @@ pkg-up@3.1.0:
   dependencies:
     find-up "^3.0.0"
 
-plop@^3.0.3:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/plop/-/plop-3.0.4.tgz#625802a210678c721364840a63187be529399cd7"
-  integrity sha512-Qc7Mrj1uuMu6B8Qmj/2KyR2sjxRDZnbAcPf/udg5/24dYWL4lMBgUKGLs7wmatQ5AqKCMiZVbAlnEXHO2cil3Q==
+plop@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/plop/-/plop-3.0.5.tgz#09720a3c28547ae3be0876b77313a981d56b6dcb"
+  integrity sha512-bD+/Lr+7NCjNIaYJq1cyHDfxtVCdjwfprgKsNwHwFnwntTiNwZWyxd1NuRDygdQWyPi+rstFMMFAPMek0cYaqA==
   dependencies:
     "@types/liftoff" "^4.0.0"
     chalk "^5.0.0"
-    cli-testing-library "^1.0.0-alpha.10"
     interpret "^2.2.0"
     liftoff "^4.0.0"
     minimist "^1.2.5"
@@ -14813,11 +14786,6 @@ tr46@~0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
   integrity sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=
-
-tree-kill@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.2.tgz#4ca09a9092c88b73a7cdc5e8a01b507b0790a0cc"
-  integrity sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
 
 trim-trailing-lines@^1.0.0:
   version "1.1.4"
