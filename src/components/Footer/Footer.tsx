@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
       </p>
       <p>
         {"Developed with ♥ in Madison, WI by "}
-        <a href="www.github.com/riccjohn">John Riccardi</a>
+        <a href="https://www.github.com/riccjohn">John Riccardi</a>
       </p>
     </StyledFooter>
   )
