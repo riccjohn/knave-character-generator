@@ -23,7 +23,7 @@
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.4.1",
     "@storybook/node-logger": "^6.3.12",
-    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/preset-create-react-app": "^4.0.1",
     "@storybook/react": "^6.4.9",
     "@types/styled-components": "^5.1.18",
     "babel-loader": "8.1.0",
