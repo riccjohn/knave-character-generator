@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const StyledTable = styled.table`
   border-collapse: collapse;
-  width: 50%;
+  width: 100%;
   table-layout: fixed;
 
   thead tr {
@@ -24,7 +24,7 @@ const StyledTable = styled.table`
     text-align: center;
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
   }
 `
