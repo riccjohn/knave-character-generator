@@ -1,5 +1,4 @@
 import React from "react"
-
 import Character from "character_generation/Character"
 import CharacterContext, { ICharacterContext } from "context/CharacterContext"
 import GlobalFonts from "fonts/fonts"

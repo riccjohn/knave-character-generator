@@ -1,4 +1,5 @@
 export { default as Abilities } from "./Abilities"
+export { default as BasicInfo } from "./BasicInfo"
 export { default as Description } from "./Description"
 export { default as Footer } from "./Footer"
 export { default as Hitpoints } from "./Hitpoints"
