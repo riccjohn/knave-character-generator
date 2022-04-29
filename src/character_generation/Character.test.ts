@@ -179,8 +179,8 @@ describe("Character", () => {
 
     test("randomly assigns a gender", () => {
       const genders = [
-        "cis-male",
-        "cis-female",
+        "male",
+        "female",
         "non-binary",
         "transgender",
         "two-spirit",

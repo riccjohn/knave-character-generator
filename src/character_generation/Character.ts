@@ -126,8 +126,8 @@ class Character {
 
   private randomGender = (): IGender => {
     const genders: IGender[] = [
-      "cis-male",
-      "cis-female",
+      "male",
+      "female",
       "non-binary",
       "transgender",
       "two-spirit",

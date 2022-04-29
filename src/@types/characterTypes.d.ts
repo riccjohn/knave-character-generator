@@ -14,8 +14,8 @@ interface IAbility {
 }
 
 type IGender =
-  | "cis-male"
-  | "cis-female"
+  | "male"
+  | "female"
   | "non-binary"
   | "transgender"
   | "two-spirit"
