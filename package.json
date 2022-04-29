@@ -19,12 +19,12 @@
     "web-vitals": "^2.1.2"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.4.1",
-    "@storybook/addon-essentials": "^6.3.12",
-    "@storybook/addon-links": "^6.4.1",
-    "@storybook/node-logger": "^6.3.12",
-    "@storybook/preset-create-react-app": "^4.0.2",
-    "@storybook/react": "^6.4.9",
+    "@storybook/addon-actions": "^6.4.22",
+    "@storybook/addon-essentials": "^6.4.22",
+    "@storybook/addon-links": "^6.4.22",
+    "@storybook/node-logger": "^6.4.22",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.4.22",
     "@types/styled-components": "^5.1.18",
     "babel-loader": "8.1.0",
     "eslint-config-prettier": "^8.3.0",
