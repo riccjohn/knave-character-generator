@@ -40,7 +40,11 @@ const ContentContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 75%;
+  width: 80%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 ContentContainer.displayName = "ContentContainer"
