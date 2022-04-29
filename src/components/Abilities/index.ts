@@ -1,1 +1,1 @@
-export { default } from "./Abilities";
+export { default } from "./Abilities"

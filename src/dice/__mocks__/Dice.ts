@@ -1,7 +1,7 @@
 class Dice {
   public static roll(num: number) {
-    return num;
+    return num
   }
 }
 
-export default Dice;
+export default Dice

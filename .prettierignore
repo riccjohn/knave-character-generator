@@ -6,3 +6,6 @@ yarn.lock
 .github
 package.json
 plop
+storybook
+.storybook
+storybook-static

@@ -1,12 +1,12 @@
-import React from "react";
-import Character from "character_generation/Character";
+import React from "react"
+import Character from "character_generation/Character"
 
 export interface ICharacterContext {
-  character: Character;
+  character: Character
 }
 
 const CharacterContext = React.createContext<ICharacterContext>({
   character: new Character(),
-});
+})
 
-export default CharacterContext;
+export default CharacterContext

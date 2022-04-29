@@ -1,4 +1,4 @@
-type IAbilities = Record<IAbilityName, IAbility>;
+type IAbilities = Record<IAbilityName, IAbility>
 
 type IAbilityName =
   | "charisma"
@@ -6,11 +6,11 @@ type IAbilityName =
   | "dexterity"
   | "intelligence"
   | "strength"
-  | "wisdom";
+  | "wisdom"
 
 interface IAbility {
-  bonus: number;
-  defense: number;
+  bonus: number
+  defense: number
 }
 
 type IGender =
@@ -21,4 +21,4 @@ type IGender =
   | "two-spirit"
   | "genderqueer"
   | "gender-fluid"
-  | "gender-neutral";
+  | "gender-neutral"
