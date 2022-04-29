@@ -63,7 +63,7 @@ describe("<App />", () => {
 
   test("displays the number of item slots used", () => {
     render(<App />)
-    expect(screen.getByText(/Item Slots Used:\s\d+\/\d+/g)).toBeVisible()
+    expect(screen.getByText(/Item Slots Used:\s\d+\/\d+/)).toBeVisible()
   })
 
   xtest("displays a 'Weapon' subtitle", () => {
