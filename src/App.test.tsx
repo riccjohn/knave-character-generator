@@ -7,6 +7,16 @@ describe("<App />", () => {
     expect(screen.getByTestId("page-title")).toBeVisible()
   })
 
+  test("displays the character's level", () => {
+    render(<App />)
+    expect(screen.getByText(/Level: \d{1,2}/)).toBeVisible()
+  })
+
+  test("displays the character's HP", () => {
+    render(<App />)
+    expect(screen.getByText(/Hitpoints: \d{1,2}\/\d{1,2}/)).toBeVisible()
+  })
+
   test("displays a 'Traits' title", () => {
     render(<App />)
     expect(screen.getByText(/Traits/)).toBeVisible()
@@ -25,15 +35,6 @@ describe("<App />", () => {
     expect(screen.getByText(/Speech:/)).toBeVisible()
     expect(screen.getByText(/Background:/)).toBeVisible()
     expect(screen.getByText(/Misfortune:/)).toBeVisible()
-  })
-
-  xtest("displays an the character's level and hit points", () => {
-    render(<App />)
-    expect(
-      screen.getByText(
-        /You are a level \d{1,2} character with \d{1,2} hitpoints./
-      )
-    ).toBeVisible()
   })
 
   test("displays an 'Ability Scores' title", () => {
@@ -62,7 +63,7 @@ describe("<App />", () => {
 
   test("displays the number of item slots used", () => {
     render(<App />)
-    expect(screen.getByText(/Item Slots Used:\s\d+\/\d+/g)).toBeVisible()
+    expect(screen.getByText(/Item Slots Used:\s\d+\/\d+/)).toBeVisible()
   })
 
   xtest("displays a 'Weapon' subtitle", () => {
