@@ -1,4 +1,5 @@
 import Character from "./Character"
+import NameGenerator from "./NameGenerator"
 
 jest.mock("dice/Dice")
 jest.mock("character_generation/Description")
@@ -7,6 +8,13 @@ jest.mock("character_generation/Randomization")
 
 describe("Character", () => {
   let character: Character
+  const fakeFirstName = "Bob"
+  const fakeSurname = "Vance"
+
+  beforeEach(() => {
+    jest.spyOn(NameGenerator, "firstName").mockReturnValue(fakeFirstName)
+    jest.spyOn(NameGenerator, "surname").mockReturnValue(fakeSurname)
+  })
 
   describe("initialization", () => {
     beforeEach(() => {
@@ -52,6 +60,10 @@ describe("Character", () => {
 
     test("generates a list of traits", () => {
       expect(character.traits).toBeTruthy()
+    })
+
+    test("sets a default name", () => {
+      expect(character.name).toEqual("")
     })
   })
 
@@ -206,6 +218,15 @@ describe("Character", () => {
 
     test("randomly generates a weapon", () => {
       expect(generatedCharacter.weapon).toBeTruthy()
+    })
+
+    test("generates a name based on the gender", () => {
+      expect(NameGenerator.firstName).toHaveBeenCalledWith(
+        generatedCharacter.gender
+      )
+      expect(NameGenerator.firstName).toHaveBeenCalledTimes(1)
+      expect(NameGenerator.surname).toHaveBeenCalledTimes(1)
+      expect(generatedCharacter.name).toBe("Bob Vance")
     })
   })
 })

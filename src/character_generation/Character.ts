@@ -1,5 +1,6 @@
 import Dice from "dice/Dice"
 import { Description, Gear, Randomization } from "character_generation"
+import NameGenerator from "./NameGenerator"
 
 class Character {
   public armor: IArmor
@@ -9,6 +10,7 @@ class Character {
   public itemSlots: number
   public level: number
   public maxHp: number
+  public name: string
   public traits: ITraits
   public weapon: IWeapon
 
@@ -48,6 +50,7 @@ class Character {
       slots: 1,
       type: "weapon",
     }
+    this.name = ""
   }
 
   public generate = (): void => {
@@ -57,6 +60,7 @@ class Character {
     this.gender = this.randomGender()
     this.itemSlots = this.constitution.defense
     this.maxHp = this.rollHitPoints()
+    this.name = this.generateName(this.gender)
 
     const gear = new Gear(this.itemSlots)
 
@@ -117,6 +121,13 @@ class Character {
     }
 
     return abilities
+  }
+
+  private generateName = (gender: IGender): string => {
+    const firstName = NameGenerator.firstName(gender)
+    const surName = NameGenerator.surname()
+
+    return `${firstName} ${surName}`
   }
 
   private rollAbilityScore = (): number => {
