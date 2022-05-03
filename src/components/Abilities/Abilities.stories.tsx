@@ -16,7 +16,7 @@ interface IProps {
   characterOverride?: Character
 }
 
-export const Primary: React.VFC<IProps> = ({ characterOverride }) => {
+export const Primary: React.FC<IProps> = ({ characterOverride }) => {
   return (
     <Shell character={characterOverride ? characterOverride : character}>
       <Abilities />

@@ -7,6 +7,6 @@ export default {
   title: "Components/Footer",
 } as Meta
 
-export const Primary: React.VFC<{}> = () => {
+export const Primary: React.FC<{}> = () => {
   return <Footer />
 }
