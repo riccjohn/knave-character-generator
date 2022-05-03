@@ -40,7 +40,8 @@ const ContentContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 75%;
+  max-width: 800px;
 
   @media (max-width: 768px) {
     width: 100%;

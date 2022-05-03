@@ -6,16 +6,11 @@ const StyledTable = styled.table`
   table-layout: fixed;
 
   thead tr {
-    background: black;
-    color: white;
+    border-bottom: 1px solid #dbdbdb;
   }
 
   thead th {
     padding: 0.5em 0;
-  }
-
-  tr:nth-child(even) {
-    background: #dbdbdb;
   }
 
   td,
