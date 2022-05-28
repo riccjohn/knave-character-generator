@@ -4,7 +4,7 @@ import CharacterContext, { ICharacterContext } from "context/CharacterContext"
 import GlobalFonts from "fonts/fonts"
 
 interface IProps {
-  character: Character
+  character?: Character
   children: React.ReactElement<unknown>
 }
 

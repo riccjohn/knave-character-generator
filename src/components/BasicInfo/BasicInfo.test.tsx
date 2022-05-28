@@ -6,6 +6,10 @@ describe("BasicInfo", () => {
     render(<BasicInfo />)
   })
 
+  test.skip("displays the character's name", () => {
+    expect(screen.getByTestId("character-name")).toBeVisible()
+  })
+
   test("displays the character's level", () => {
     expect(screen.getByText(/Level: \d{1,2}/)).toBeVisible()
   })
