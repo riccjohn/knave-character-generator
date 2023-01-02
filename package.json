@@ -4,7 +4,7 @@
   "homepage": "https://riccjohn.github.io/knave-character-generator",
   "private": true,
   "dependencies": {
-    "@types/jest": "^27.0.3",
+    "@types/jest": "^29.2.5",
     "@types/node": "^17.0.21",
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.3",
